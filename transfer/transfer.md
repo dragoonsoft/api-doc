@@ -1,4 +1,4 @@
-# 平台介接 API 功能說明（繁體中文）
+# DRAGOON SOFT API說明文件（繁體中文)-轉帳錢包v1.3.1
 
 [TOC]
 ## 前言
@@ -432,15 +432,16 @@ https://<url>/v1/member/login_game [POST]
 | oper |String|否| 額外選填參數 |
 | backurl |String|否| 離開或結束遊戲 轉跳至該網址 |
 | is_demo |Boolean|否| 是否試玩 |
-| btn |string|否| 隱藏離開按鈕，顯示注單按鈕 btn=0,1 顯示離開按鈕，顯示注單按鈕 btn=1,1 顯示離開按鈕，隱藏注單按鈕 btn=1,0|
+| btn |String|否| 是否隱藏特定按鈕  請參考下表|
 
-
-#### 回傳參數 Response Parameters
-|參數名稱|型別|說明|
+#### btn 參數對照表
+|離開按鈕|注單按鈕|帶入參數|
 |---|---|---|
-|code|Number|狀態代碼|
-|message|String|狀態訊息|
-|url|String|玩家使用的連結|
+|隱藏|顯示|0,1|
+|顯示|顯示|1,1|
+|顯示|隱藏|1,0|
+|隱藏|隱藏|0,0|
+ 不帶入時預設為顯示
 
 **範例**
 
